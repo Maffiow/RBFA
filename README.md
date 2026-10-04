@@ -15,9 +15,6 @@ You get:
   goals and ranking position), location, series (with full ranking), referee and match ID.
   The sensors are disabled by default; enable the ones you need.
 
-Based on the original [rgerbranda/rbfa](https://github.com/rgerbranda/rbfa) integration,
-rewritten to work again with the current RBFA website.
-
 ## Installation
 
 ### HACS (recommended)
@@ -30,7 +27,7 @@ Or manually:
 2. Repository: `https://github.com/Maffiow/RBFA`, type: **Integration** → **Add**.
 3. Search for **RBFA** in HACS, click **Download** and restart Home Assistant.
 
-> Coming from `rgerbranda/rbfa`? Remove that repository in HACS first (or delete
+> Already using another `rbfa` integration? Remove it in HACS first (or delete
 > `/config/custom_components/rbfa`), then install this one. Your existing configuration
 > and entity IDs are kept.
 
