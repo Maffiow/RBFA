@@ -159,3 +159,8 @@ logger:
   logs:
     custom_components.rbfa: debug
 ```
+
+## License
+
+[MIT](LICENSE). Original integration by [rgerbranda](https://github.com/rgerbranda/rbfa),
+used with permission.
