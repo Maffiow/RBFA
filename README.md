@@ -162,5 +162,4 @@ logger:
 
 ## License
 
-[MIT](LICENSE). Original integration by [rgerbranda](https://github.com/rgerbranda/rbfa),
-used with permission.
+[MIT](LICENSE)
