@@ -1,0 +1,6 @@
+{
+  "name": "RBFA",
+  "render_readme": true,
+  "country": ["BE"],
+  "homeassistant": "2024.11.0"
+}

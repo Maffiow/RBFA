@@ -1,0 +1,250 @@
+{
+   "config": {
+      "step": {
+         "user": {
+            "title": "RBFA",
+            "description": "Royal Belgian Football Association",
+            "data": {
+               "team": "Identiteit van het team",
+               "alt_name": "Alternatieve naam",
+               "duration": "Duur van de wedstrijd inclusief rust",
+               "show_ranking": "Toon uitslagen en rangschikking",
+               "show_referee": "Toon scheidsrechter"
+            }
+         }
+      },
+      "abort": {
+         "already_configured": "Team is al toegevoegd"
+      },
+      "error": {
+         "blocked": "De RBFA-website blokkeerde de aanvraag. Probeer het later opnieuw.",
+         "cannot_connect": "Kan geen verbinding maken met de RBFA-website.",
+         "invalid_team": "Ploeg niet gevonden. Gebruik het nummer na 'ploeg' in de URL van de ploegpagina."
+      }
+   },
+   "options": {
+      "step": {
+         "init": {
+            "title": "RBFA",
+            "description": "Royal Belgian Football Association",
+            "data": {
+               "alt_name": "Alternatieve naam",
+               "duration": "Duur van de wedstrijd inclusief rust",
+               "show_ranking": "Toon uitslagen en rangschikking",
+               "show_referee": "Toon scheidsrechter"
+            }
+         }
+      }
+   },
+   "entity": {
+      "sensor": {
+         "hometeam": {
+            "name": "Thuis",
+            "state_attributes": {
+               "team": {
+                  "name": "Elftal"
+               },
+               "starttime": {
+                  "name": "Start"
+               },
+               "endtime": {
+                  "name": "Eind"
+               },
+               "id": {
+                  "name": "Team ID"
+               },
+               "goals": {
+                  "name": "Doelpunten"
+               },
+               "penalties": {
+                  "name": "Strafschoppen"
+               },
+               "position": {
+                  "name": "Positie"
+               },
+               "tag": {
+                  "name": "Planning",
+                  "state": {
+                     "upcoming": "Eerstvolgende wedstrijd",
+                     "lastmatch": "Laatste wedstrijd"
+                  }
+               },
+               "baseid": {
+                  "name": "Geconfigureerd elftal"
+               }
+            }
+         },
+         "awayteam": {
+            "name": "Uit",
+            "state_attributes": {
+               "team": {
+                  "name": "Elftal"
+               },
+               "goals": {
+                  "name": "Doelpunten"
+               },
+               "penalties": {
+                  "name": "Strafschoppen"
+               },
+               "date": {
+                  "name": "Datum"
+               },
+               "id": {
+                  "name": "Team ID"
+               },
+               "position": {
+                  "name": "Positie"
+               },
+               "tag": {
+                  "name": "Planning",
+                  "state": {
+                     "upcoming": "Eerstvolgende wedstrijd",
+                     "lastmatch": "Laatste wedstrijd"
+                  }
+               },
+               "baseid": {
+                  "name": "Geconfigureerd elftal"
+               }
+            }
+         },
+         "location": {
+            "name": "Locatie",
+            "state_attributes": {
+               "tag": {
+                  "name": "Planning",
+                  "state": {
+                     "upcoming": "Eerstvolgende wedstrijd",
+                     "lastmatch": "Laatste wedstrijd"
+                  }
+               },
+               "baseid": {
+                  "name": "Geconfigureerd elftal"
+               }
+            }
+         },
+         "referee": {
+            "name": "Scheidsrechter",
+            "state_attributes": {
+               "team": {
+                  "name": "Elftal"
+               },
+               "date": {
+                  "name": "Datum"
+               },
+               "id": {
+                  "name": "Team ID"
+               },
+               "tag": {
+                  "name": "Planning",
+                  "state": {
+                     "upcoming": "Eerstvolgende wedstrijd",
+                     "lastmatch": "Laatste wedstrijd"
+                  }
+               },
+               "baseid": {
+                  "name": "Geconfigureerd elftal"
+               }
+            }
+         },
+         "starttime": {
+            "name": "Start",
+            "state_attributes": {
+               "team": {
+                  "name": "Elftal"
+               },
+               "date": {
+                  "name": "Datum"
+               },
+               "id": {
+                  "name": "Team ID"
+               },
+               "tag": {
+                  "name": "Planning",
+                  "state": {
+                     "upcoming": "Eerstvolgende wedstrijd",
+                     "lastmatch": "Laatste wedstrijd"
+                  }
+               },
+               "baseid": {
+                  "name": "Geconfigureerd elftal"
+               }
+            }
+         },
+         "endtime": {
+            "name": "Eind",
+            "state_attributes": {
+               "team": {
+                  "name": "Elftal"
+               },
+               "date": {
+                  "name": "Datum"
+               },
+               "id": {
+                  "name": "Team ID"
+               },
+               "tag": {
+                  "name": "Planning",
+                  "state": {
+                     "upcoming": "Eerstvolgende wedstrijd",
+                     "lastmatch": "Laatste wedstrijd"
+                  }
+               },
+               "baseid": {
+                  "name": "Geconfigureerd elftal"
+               }
+            }
+         },
+         "matchid": {
+            "name": "Wedstrijd ID",
+            "state_attributes": {
+               "team": {
+                  "name": "Elftal"
+               },
+               "date": {
+                  "name": "Datum"
+               },
+               "id": {
+                  "name": "Team ID"
+               },
+               "tag": {
+                  "name": "Planning",
+                  "state": {
+                     "upcoming": "Eerstvolgende wedstrijd",
+                     "lastmatch": "Laatste wedstrijd"
+                  }
+               },
+               "baseid": {
+                  "name": "Geconfigureerd elftal"
+               }
+            }
+         },
+         "series": {
+            "name": "Reeks",
+            "state_attributes": {
+               "team": {
+                  "name": "Elftal"
+               },
+               "date": {
+                  "name": "Datum"
+               },
+               "id": {
+                  "name": "Team ID"
+               },
+               "ranking": {
+                  "name": "Rangschikking"
+               },
+               "tag": {
+                  "name": "Planning",
+                  "state": {
+                     "upcoming": "Eerstvolgende wedstrijd",
+                     "lastmatch": "Laatste wedstrijd"
+                  }
+               },
+               "baseid": {
+                  "name": "Geconfigureerd elftal"
+               }
+            }
+         }
+      }
+   }
+}

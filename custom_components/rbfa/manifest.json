@@ -1,0 +1,13 @@
+{
+  "domain": "rbfa",
+  "name": "RBFA",
+  "codeowners": ["@Maffiow"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/Maffiow/RBFA",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Maffiow/RBFA/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

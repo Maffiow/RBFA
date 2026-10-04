@@ -1,0 +1,44 @@
+name: Release
+
+# Bump "version" in custom_components/rbfa/manifest.json and push to main:
+# this workflow then tags the commit and publishes a GitHub release, which
+# HACS picks up as a new version.
+
+on:
+  push:
+    branches: [main]
+    paths: [custom_components/rbfa/manifest.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read version from manifest
+        id: version
+        run: echo "version=$(jq -r .version custom_components/rbfa/manifest.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Create release if the version is new
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          TAG="v${VERSION}"
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists, nothing to do."
+            exit 0
+          fi
+          cd custom_components/rbfa
+          zip -r "$GITHUB_WORKSPACE/rbfa.zip" . -x '__pycache__/*'
+          cd "$GITHUB_WORKSPACE"
+          gh release create "$TAG" rbfa.zip \
+            --target "$GITHUB_SHA" \
+            --title "$TAG" \
+            --generate-notes

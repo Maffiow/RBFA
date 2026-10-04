@@ -1,0 +1,49 @@
+{
+   "config": {
+      "step": {
+         "user": {
+            "title": "RBFA",
+            "description": "Royal Belgian Football Association",
+            "data": {
+               "team": "Identity of the team"
+            }
+         }
+      },
+      "abort": {
+         "already_configured": "Team already added to configuration"
+      },
+      "error": {
+         "blocked": "The RBFA website blocked the request. Try again later.",
+         "cannot_connect": "Could not connect to the RBFA website.",
+         "invalid_team": "Team not found. Use the number after 'ploeg' in the URL of the team page."
+      }
+   },
+   "entity": {
+      "sensor": {
+         "hometeam": {
+            "name": "Home team"
+         },
+         "awayteam": {
+            "name": "Away team"
+         },
+         "location": {
+            "name": "Location"
+         },
+         "starttime": {
+            "name": "Start time"
+         },
+         "endtime": {
+            "name": "Finish time"
+         },
+         "series": {
+            "name": "Series"
+         },
+         "referee": {
+            "name": "Referee"
+         },
+         "matchid": {
+            "name": "Match ID"
+         }
+      }
+   }
+}
