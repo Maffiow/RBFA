@@ -5,7 +5,11 @@
             "title": "RBFA",
             "description": "Royal Belgian Football Association",
             "data": {
-               "team": "Identity of the team"
+               "team": "Identity of the team",
+               "alt_name": "Alternative name",
+               "duration": "Match duration including the break",
+               "show_ranking": "Show results and ranking",
+               "show_referee": "Show referee"
             }
          }
       },
@@ -43,6 +47,20 @@
          },
          "matchid": {
             "name": "Match ID"
+         }
+      }
+   },
+   "options": {
+      "step": {
+         "init": {
+            "title": "RBFA",
+            "description": "Royal Belgian Football Association",
+            "data": {
+               "alt_name": "Alternative name",
+               "duration": "Match duration including the break",
+               "show_ranking": "Show results and ranking",
+               "show_referee": "Show referee"
+            }
          }
       }
    }
