@@ -231,6 +231,8 @@ content: >-
 
 ### Fairplaykaart
 
+<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/fairplay.png" alt="Fairplay" width="528">
+
 Sorteert de ploegen van de reeks op fairplay-percentage:
 
 ```yaml

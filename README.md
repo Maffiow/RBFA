@@ -230,6 +230,8 @@ content: >-
 
 ### Fair play card
 
+<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/fairplay.png" alt="Fair play" width="528">
+
 Sorts the teams of the series by fair play percentage:
 
 ```yaml
