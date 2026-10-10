@@ -302,7 +302,14 @@ def _parse_ranking(data: dict | None) -> list[dict]:
     if not rankings:
         return []
     return [
-        {"position": t.get("position"), "team": t.get("name"), "id": t.get("teamId")}
+        {
+            "position": t.get("position"),
+            "team": t.get("name"),
+            "id": t.get("teamId"),
+            "logo": t.get("logo"),
+            "matches": t.get("matchesPlayed"),
+            "fairplay": t.get("fairplayPercentage"),
+        }
         for t in rankings[0].get("teams") or []
     ]
 
