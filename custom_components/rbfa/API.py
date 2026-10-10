@@ -8,7 +8,7 @@ from typing import Any
 
 import aiohttp
 
-from .const import API_HEADERS, API_URL, HASHES, REQUIRED, VARIABLES
+from .const import API_HEADERS, API_URL, HASHES, QUERIES, REQUIRED, VARIABLES
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -51,13 +51,16 @@ class RbfaApi:
                 self._last_request = loop.time()
 
     async def _do_query(self, operation: str, value: str) -> Any:
-        payload = {
+        payload: dict[str, Any] = {
             "operationName": operation,
             "variables": {VARIABLES[operation]: value, "language": self._language},
-            "extensions": {
-                "persistedQuery": {"version": 1, "sha256Hash": HASHES[operation]}
-            },
         }
+        if operation in QUERIES:
+            payload["query"] = QUERIES[operation]
+        else:
+            payload["extensions"] = {
+                "persistedQuery": {"version": 1, "sha256Hash": HASHES[operation]}
+            }
         try:
             async with self._session.post(
                 API_URL, json=payload, headers=API_HEADERS, timeout=TIMEOUT
@@ -105,3 +108,6 @@ class RbfaApi:
 
     async def get_rankings(self, series_id: str) -> dict | None:
         return await self._query("GetSeriesRankings", series_id)
+
+    async def get_team_members(self, team_id: str) -> dict | None:
+        return await self._query("GetTeamMembers", team_id)

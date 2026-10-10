@@ -76,6 +76,8 @@ class RbfaSensor(RbfaEntity, SensorEntity):
     """Sensor showing one field of the upcoming or last match."""
 
     _attr_entity_registry_enabled_default = False
+    # Squads are large and rarely change; keep them out of the recorder.
+    _unrecorded_attributes = frozenset({"squads"})
 
     def __init__(
         self,
@@ -131,5 +133,7 @@ class RbfaSensor(RbfaEntity, SensorEntity):
 
         if key == "series" and match.get("ranking"):
             attributes["ranking"] = match["ranking"]
+            if match.get("squads"):
+                attributes["squads"] = match["squads"]
 
         return attributes

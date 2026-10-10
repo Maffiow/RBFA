@@ -32,6 +32,9 @@ REQUEST_DELAY = 1.0
 # Maximum number of match details (location / referee) fetched per update for
 # matches that are not cached yet. The rest is filled in on later updates.
 MAX_DETAIL_FETCHES = 5
+# Squads (players and staff of every team in the series) change rarely, and
+# fetching them costs one request per team, so they are refreshed sparingly.
+SQUAD_REFRESH = timedelta(hours=12)
 
 CONF_TEAM = "team"
 CONF_ALT_NAME = "alt_name"
@@ -46,6 +49,7 @@ VARIABLES = {
     "GetTeamCalendar": "teamId",
     "GetMatchDetail": "matchId",
     "GetSeriesRankings": "seriesId",
+    "GetTeamMembers": "teamId",
 }
 
 HASHES = {
@@ -55,11 +59,22 @@ HASHES = {
     "GetSeriesRankings": "0a53124a9bc8872b686f22d80fd545622dbaf4b27a7596e1207b097b92c87953",
 }
 
+# Operations sent as a full query document instead of a persisted-query hash.
+QUERIES = {
+    "GetTeamMembers": (
+        "query GetTeamMembers($teamId: ID!, $language: Language!) {"
+        " teamMembers(teamId: $teamId, language: $language) {"
+        " players { id lastName firstName statistics { numberOfMatches numberOfGoals } }"
+        " staff { id lastName firstName function } } }"
+    ),
+}
+
 REQUIRED = {
     "GetTeam": "team",
     "GetTeamCalendar": "teamCalendar",
     "GetMatchDetail": "matchDetail",
     "GetSeriesRankings": "seriesRankings",
+    "GetTeamMembers": "teamMembers",
 }
 
 

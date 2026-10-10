@@ -21,6 +21,7 @@ from .const import (
     DOMAIN,
     MAX_DETAIL_FETCHES,
     REQUEST_DELAY,
+    SQUAD_REFRESH,
     TZ,
     UPDATE_INTERVAL,
     get_option,
@@ -55,6 +56,8 @@ class MyCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         self._team_info: dict | None = None
         # match id -> {"location": str | None, "referee": str | None}
         self._details: dict[str, dict[str, str | None]] = {}
+        # team id -> (fetched at, {"players": [...], "staff": [...]})
+        self._squads: dict[str, tuple[datetime, dict[str, list[dict]]]] = {}
 
     async def _async_update_data(self) -> dict[str, Any]:
         entry = self.config_entry
@@ -166,11 +169,42 @@ class MyCoordinator(DataUpdateCoordinator[dict[str, Any]]):
                     _LOGGER.debug("Ranking for %s failed: %s", series, err)
                     cache[series] = []
             match["ranking"] = cache[series]
+            match["squads"] = await self._squads_for(cache[series])
             for rank in cache[series]:
                 if rank["id"] == match["hometeamid"]:
                     match["hometeamposition"] = rank["position"]
                 if rank["id"] == match["awayteamid"]:
                     match["awayteamposition"] = rank["position"]
+
+    async def _squads_for(self, ranking: list[dict]) -> dict[str, dict]:
+        """Return players and staff of every team in a series, keyed by team id.
+
+        Cached per team; a stale or missing squad is fetched again, and a
+        failure keeps whatever was fetched before.
+        """
+        now = dt_util.utcnow()
+        for rank in ranking:
+            team_id = rank.get("id")
+            if not team_id:
+                continue
+            cached = self._squads.get(team_id)
+            if cached and now - cached[0] < SQUAD_REFRESH:
+                continue
+            try:
+                members = await self.api.get_team_members(team_id)
+            except RbfaBlockedError as err:
+                _LOGGER.warning("Stopped fetching squads: %s", err)
+                break
+            except RbfaError as err:
+                _LOGGER.debug("Squad of team %s failed: %s", team_id, err)
+                continue
+            self._squads[team_id] = (now, _parse_squad(members))
+
+        return {
+            rank["id"]: self._squads[rank["id"]][1]
+            for rank in ranking
+            if rank.get("id") in self._squads
+        }
 
     def _match_data(
         self, item: dict, start: datetime, end: datetime, show_referee: bool
@@ -208,6 +242,7 @@ class MyCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             "series": series.get("name"),
             "seriesid": series.get("id"),
             "ranking": [],
+            "squads": {},
         }
 
     def _event(self, item: dict, start: datetime, end: datetime) -> dict[str, Any]:
@@ -270,3 +305,33 @@ def _parse_ranking(data: dict | None) -> list[dict]:
         {"position": t.get("position"), "team": t.get("name"), "id": t.get("teamId")}
         for t in rankings[0].get("teams") or []
     ]
+
+
+def _person_name(person: dict) -> str:
+    """RBFA lists people as upper-case LASTNAME FIRSTNAME; make it readable."""
+    first = (person.get("firstName") or "").strip().title()
+    last = (person.get("lastName") or "").strip().title()
+    return f"{first} {last}".strip()
+
+
+def _parse_squad(data: dict | None) -> dict[str, list[dict]]:
+    data = data or {}
+    players = []
+    for player in data.get("players") or []:
+        stats = player.get("statistics") or {}
+        players.append(
+            {
+                "name": _person_name(player),
+                "matches": stats.get("numberOfMatches") or 0,
+                "goals": stats.get("numberOfGoals") or 0,
+            }
+        )
+
+    staff = []
+    for member in data.get("staff") or []:
+        function = member.get("function") or []
+        if isinstance(function, str):
+            function = [function]
+        staff.append({"name": _person_name(member), "function": ", ".join(function)})
+
+    return {"players": players, "staff": staff}

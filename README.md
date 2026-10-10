@@ -12,7 +12,8 @@ You get:
 
 - a **calendar** with all matches of the team (score, series, location)
 - **sensors** for the upcoming and the last match: start/end time, home/away team (with logo,
-  goals and ranking position), location, series (with full ranking), referee and match ID.
+  goals and ranking position), location, series (with full ranking and the squads of
+  every team in the series), referee and match ID.
   The sensors are disabled by default; enable the ones you need.
 
 ## Installation
