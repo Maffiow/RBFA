@@ -67,7 +67,7 @@ Copy `custom_components/rbfa` to `/config/custom_components/rbfa` and restart Ho
 
 **Settings → Devices & services → Add integration → RBFA**
 
-![Configuration](https://raw.githubusercontent.com/Maffiow/RBFA/main/images/configuration.png)
+![Configuration](https://raw.githubusercontent.com/Maffiow/RBFA/main/images/config-dialog.png)
 
 | Field | Description |
 |---|---|
@@ -181,14 +181,14 @@ In these series the team names from RBFA also end in a short code such as `A 2`,
 
 ## Example cards
 
-![Example](https://raw.githubusercontent.com/Maffiow/RBFA/main/images/example.png)
+![Example](https://raw.githubusercontent.com/Maffiow/RBFA/main/images/example-cards.png)
 
 All examples are [Markdown cards](https://www.home-assistant.io/dashboards/markdown/) and
 need no custom cards. Replace the entity IDs with the ones in your installation.
 
 ### Match card
 
-<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/match_sheet.png" alt="Match card" width="528">
+<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/match-card.png" alt="Match card" width="528">
 
 ```
 <table width="100%">
@@ -211,7 +211,7 @@ need no custom cards. Replace the entity IDs with the ones in your installation.
 
 ### Ranking card
 
-<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/ranking.png" alt="Ranking" width="528">
+<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/ranking-card.png" alt="Ranking" width="528">
 
 Uses the `ranking` attribute of the series sensor and the `baseid` attribute (your team ID)
 to print your own team in bold:
@@ -230,7 +230,7 @@ content: >-
 
 ### Fair play card
 
-<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/fairplay.png" alt="Fair play" width="528">
+<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/fairplay-card.png" alt="Fair play" width="528">
 
 Sorts the teams of the series by fair play percentage:
 

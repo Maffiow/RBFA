@@ -67,7 +67,7 @@ Kopieer `custom_components/rbfa` naar `/config/custom_components/rbfa` en hersta
 
 **Instellingen → Apparaten & diensten → Integratie toevoegen → RBFA**
 
-![Configuratie](https://raw.githubusercontent.com/Maffiow/RBFA/main/images/configuration.png)
+![Configuratie](https://raw.githubusercontent.com/Maffiow/RBFA/main/images/config-dialog.png)
 
 | Veld | Uitleg |
 |---|---|
@@ -182,14 +182,14 @@ bijvoorbeeld `E. Mechelen a/d Maas A 2`.
 
 ## Voorbeeldkaarten
 
-![Voorbeeld](https://raw.githubusercontent.com/Maffiow/RBFA/main/images/example.png)
+![Voorbeeld](https://raw.githubusercontent.com/Maffiow/RBFA/main/images/example-cards.png)
 
 Alle voorbeelden zijn [Markdown-kaarten](https://www.home-assistant.io/dashboards/markdown/)
 en hebben geen extra kaarten nodig. Vervang de entiteits-ID's door die van jouw installatie.
 
 ### Wedstrijdkaart
 
-<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/match_sheet.png" alt="Wedstrijdkaart" width="528">
+<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/match-card.png" alt="Wedstrijdkaart" width="528">
 
 ```
 <table width="100%">
@@ -212,7 +212,7 @@ en hebben geen extra kaarten nodig. Vervang de entiteits-ID's door die van jouw 
 
 ### Klassementkaart
 
-<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/ranking.png" alt="Klassement" width="528">
+<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/ranking-card.png" alt="Klassement" width="528">
 
 Gebruikt het attribuut `ranking` van de reeks-sensor en het attribuut `baseid` (je eigen
 ploegnummer) om je eigen ploeg vet te zetten:
@@ -231,7 +231,7 @@ content: >-
 
 ### Fairplaykaart
 
-<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/fairplay.png" alt="Fairplay" width="528">
+<img src="https://raw.githubusercontent.com/Maffiow/RBFA/main/images/fairplay-card.png" alt="Fairplay" width="528">
 
 Sorteert de ploegen van de reeks op fairplay-percentage:
 
