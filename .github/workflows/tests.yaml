@@ -19,8 +19,10 @@ jobs:
           # Minimum version supported (hacs.json "homeassistant").
           - name: "2024.12.0 (minimum)"
             python: "3.12"
-            # josepy 2 dropped an API the 2024.12 cloud integration still uses.
-            install: pytest-homeassistant-custom-component==0.13.190 "josepy<2"
+            # Keep two libraries at the versions 2024.12 shipped with: josepy 2
+            # dropped an API its cloud integration uses, and pycares 4.9+ leaves
+            # a resolver thread behind that the test harness reports as a leak.
+            install: pytest-homeassistant-custom-component==0.13.190 "josepy<2" "pycares<4.9"
           # Newest Home Assistant the test package supports; it follows each
           # Home Assistant release within days.
           - name: latest
