@@ -1,0 +1,91 @@
+{
+ "id": "CHP_132623",
+ "name": "Fairplay ",
+ "rankings": [
+  {
+   "type": "generalRanking",
+   "teams": [
+    {
+     "teamId": "378177",
+     "name": "E. Mechelen a/d Maas",
+     "position": 1,
+     "clubId": "1932",
+     "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg",
+     "points": null,
+     "matchesPlayed": 8,
+     "fairplayPercentage": 84
+    },
+    {
+     "teamId": "381554",
+     "name": "E. Termien",
+     "position": 2,
+     "clubId": "2572",
+     "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07919.jpg",
+     "points": null,
+     "matchesPlayed": 8,
+     "fairplayPercentage": 91
+    },
+    {
+     "teamId": "360555",
+     "name": "Esperanza Pelt",
+     "position": 3,
+     "clubId": "1386",
+     "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02529.jpg",
+     "points": null,
+     "matchesPlayed": 9,
+     "fairplayPercentage": 95
+    },
+    {
+     "teamId": "374000",
+     "name": "K.St. Elen",
+     "position": 4,
+     "clubId": "2097",
+     "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06047.jpg",
+     "points": null,
+     "matchesPlayed": 9,
+     "fairplayPercentage": 89
+    },
+    {
+     "teamId": "367049",
+     "name": "KFC Turnhout",
+     "position": 5,
+     "clubId": "1047",
+     "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00148.jpg",
+     "points": null,
+     "matchesPlayed": 9,
+     "fairplayPercentage": 88
+    },
+    {
+     "teamId": "375033",
+     "name": "Lutlommel VV",
+     "position": 6,
+     "clubId": "1443",
+     "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02770.jpg",
+     "points": null,
+     "matchesPlayed": 9,
+     "fairplayPercentage": 93
+    },
+    {
+     "teamId": "363232",
+     "name": "Torpedo Hasselt",
+     "position": 7,
+     "clubId": "2259",
+     "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06803.jpg",
+     "points": null,
+     "matchesPlayed": 9,
+     "fairplayPercentage": 74
+    },
+    {
+     "teamId": "378705",
+     "name": "Zonhoven United",
+     "position": 8,
+     "clubId": "1446",
+     "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02780.jpg",
+     "points": null,
+     "matchesPlayed": 9,
+     "fairplayPercentage": 89
+    }
+   ]
+  }
+ ]
+}

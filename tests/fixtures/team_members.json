@@ -1,0 +1,124 @@
+{
+ "players": [
+  {
+   "lastName": "Altintas",
+   "firstName": "Seyyid Ali",
+   "statistics": {
+    "numberOfMatches": 1,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Cagnazzo",
+   "firstName": "Xavi",
+   "statistics": {
+    "numberOfMatches": 11,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Caltabellotta",
+   "firstName": "Gianluca",
+   "statistics": {
+    "numberOfMatches": 11,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Delodder",
+   "firstName": "Loris",
+   "statistics": {
+    "numberOfMatches": 10,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Ferraro",
+   "firstName": "Michele",
+   "statistics": {
+    "numberOfMatches": 3,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Gezici",
+   "firstName": "Musatafa",
+   "statistics": {
+    "numberOfMatches": 10,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Inan",
+   "firstName": "Burak",
+   "statistics": {
+    "numberOfMatches": 11,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Mazzei",
+   "firstName": "Xavi",
+   "statistics": {
+    "numberOfMatches": 11,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Meeuwissen",
+   "firstName": "Mike Jp",
+   "statistics": {
+    "numberOfMatches": 11,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Perrone",
+   "firstName": "Tiziano",
+   "statistics": {
+    "numberOfMatches": 9,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Seckin",
+   "firstName": "Ilyas Emre",
+   "statistics": {
+    "numberOfMatches": 11,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Sorce",
+   "firstName": "Lorenzo",
+   "statistics": {
+    "numberOfMatches": 11,
+    "numberOfGoals": 0
+   }
+  },
+  {
+   "lastName": "Woestenborghs",
+   "firstName": "Lewis",
+   "statistics": {
+    "numberOfMatches": 11,
+    "numberOfGoals": 0
+   }
+  }
+ ],
+ "staff": [
+  {
+   "lastName": "Caltabellotta",
+   "firstName": "Gaetano",
+   "function": [
+    "T1"
+   ]
+  },
+  {
+   "lastName": "Delodder",
+   "firstName": "Joeri",
+   "function": [
+    "Officiële Team Afgevaardigde"
+   ]
+  }
+ ]
+}

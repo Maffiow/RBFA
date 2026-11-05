@@ -1,0 +1,578 @@
+[
+ {
+  "id": "7641120",
+  "startTime": "2026-08-22T10:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "383264",
+   "name": "LS LEUT",
+   "clubId": "2602",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/08074.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. MECHELEN A/D MAAS",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "FRN_889",
+   "name": "U10"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7645566",
+  "startTime": "2026-08-22T11:00:00",
+  "channel": "belgianfootball",
+  "homeTeam": {
+   "id": "360466",
+   "name": "K.PATRO EISDEN MAASMECH.",
+   "clubId": "1577",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/03434.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "EENDRACHT MECHELEN A/D MAAS",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "FRN_79",
+   "name": "-10a"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7631718",
+  "startTime": "2026-08-26T18:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378177",
+   "name": "E. MECHELEN A/D MAAS PLOEG GAETANO",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "awayTeam": {
+   "id": "377074",
+   "name": "RC HADES KIEWIT",
+   "clubId": "2764",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/08721.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "FRN_889",
+   "name": "U10"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7622198",
+  "startTime": "2026-08-29T10:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "381916",
+   "name": "KVV ZEPPEREN-BRUSTEM",
+   "clubId": "2651",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/08250.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. MECHELEN A/D MAAS",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "FRN_889",
+   "name": "U10"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660546",
+  "startTime": "2026-09-13T11:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378705",
+   "name": "Zonhoven United A 1",
+   "clubId": "1446",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02780.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660547",
+  "startTime": "2026-09-20T10:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "awayTeam": {
+   "id": "367049",
+   "name": "KFC Turnhout A 2",
+   "clubId": "1047",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00148.jpg"
+  },
+  "outcome": {
+   "status": "stopped",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": "Stopgezet"
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "stopped"
+ },
+ {
+  "id": "7660552",
+  "startTime": "2026-09-26T12:30:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "374000",
+   "name": "K.St. Elen A 2-1",
+   "clubId": "2097",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06047.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660555",
+  "startTime": "2026-10-03T12:15:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "awayTeam": {
+   "id": "360555",
+   "name": "Esperanza Pelt 1",
+   "clubId": "1386",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02529.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660559",
+  "startTime": "2026-10-10T10:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "363232",
+   "name": "Torpedo Hasselt A 1",
+   "clubId": "2259",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06803.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660563",
+  "startTime": "2026-10-17T12:15:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "awayTeam": {
+   "id": "375033",
+   "name": "Lutlommel VV A 1",
+   "clubId": "1443",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02770.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660570",
+  "startTime": "2026-10-25T10:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "381554",
+   "name": "E. Termien A 1",
+   "clubId": "2572",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07919.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660572",
+  "startTime": "2026-10-31T12:45:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "awayTeam": {
+   "id": "378705",
+   "name": "Zonhoven United A 1",
+   "clubId": "1446",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02780.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660576",
+  "startTime": "2026-11-07T11:30:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "367049",
+   "name": "KFC Turnhout A 2",
+   "clubId": "1047",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/00148.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660580",
+  "startTime": "2026-11-15T10:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "awayTeam": {
+   "id": "374000",
+   "name": "K.St. Elen A 2-1",
+   "clubId": "2097",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06047.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660587",
+  "startTime": "2026-11-21T13:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "360555",
+   "name": "Esperanza Pelt 1",
+   "clubId": "1386",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02529.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660588",
+  "startTime": "2026-11-28T12:15:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "awayTeam": {
+   "id": "363232",
+   "name": "Torpedo Hasselt A 1",
+   "clubId": "2259",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/06803.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660593",
+  "startTime": "2026-12-05T10:30:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "375033",
+   "name": "Lutlommel VV A 1",
+   "clubId": "1443",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/02770.jpg"
+  },
+  "awayTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ },
+ {
+  "id": "7660539",
+  "startTime": "2026-12-12T10:00:00",
+  "channel": "voetbalvlaanderen",
+  "homeTeam": {
+   "id": "378177",
+   "name": "E. Mechelen a/d Maas A 2",
+   "clubId": "1932",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/05384.jpg"
+  },
+  "awayTeam": {
+   "id": "381554",
+   "name": "E. Termien A 1",
+   "clubId": "2572",
+   "logo": "https://belgianfootball.s3.eu-central-1.amazonaws.com/s3fs-public/rbfa/img/logos/clubs/07919.jpg"
+  },
+  "outcome": {
+   "status": "planned",
+   "homeTeamGoals": null,
+   "homeTeamPenaltiesScored": null,
+   "awayTeamGoals": null,
+   "awayTeamPenaltiesScored": null,
+   "subscript": null
+  },
+  "series": {
+   "id": "CHP_132623",
+   "name": "U10 Interprov Voetb V K"
+  },
+  "officials": [],
+  "showScore": false,
+  "state": "planned"
+ }
+]

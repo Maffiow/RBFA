@@ -1,0 +1,53 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  schedule:
+    # Weekly, so a new Home Assistant release or an RBFA API change is noticed.
+    - cron: "0 4 * * 1"
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    name: Home Assistant ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Minimum version supported (hacs.json "homeassistant").
+          - name: "2024.11.0 (minimum)"
+            python: "3.12"
+            install: pytest-homeassistant-custom-component==0.13.181
+          # Newest Home Assistant release on PyPI.
+          - name: latest
+            python: "3.14"
+            install: pytest-homeassistant-custom-component
+            upgrade_ha: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install
+        run: |
+          pip install "${{ matrix.install }}"
+          if [ "${{ matrix.upgrade_ha }}" = "true" ]; then
+            # The test package can trail the newest release by a few days.
+            pip install --upgrade homeassistant
+          fi
+          python -c "from homeassistant.const import __version__; print('Home Assistant', __version__)"
+      - name: Run tests
+        run: pytest -v
+
+  rbfa-api:
+    name: Live RBFA API
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install aiohttp
+      - run: python scripts/check_rbfa_api.py
