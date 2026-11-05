@@ -14,6 +14,9 @@ from .const import CONF_SHOW_REFEREE, DOMAIN, get_option
 from .coordinator import MyCoordinator
 from .entity import RbfaEntity
 
+# The coordinator fetches the data, so entity updates need no limit.
+PARALLEL_UPDATES = 0
+
 SENSORS = (
     SensorEntityDescription(
         key="starttime",

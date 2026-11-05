@@ -27,6 +27,7 @@ youth teams.
 - [How and when data is refreshed](#how-and-when-data-is-refreshed)
 - [Youth series: no ranking, but fair play](#youth-series-no-ranking-but-fair-play)
 - [Example cards](#example-cards)
+- [Removing the integration](#removing-the-integration)
 - [Updates](#updates)
 - [Troubleshooting](#troubleshooting)
 - [Releasing a new version (maintainers)](#releasing-a-new-version-maintainers)
@@ -300,6 +301,19 @@ actions:
       message: "Kick-off in 2 hours at {{ trigger.calendar_event.location | replace('\n', ', ') }}"
 mode: single
 ```
+
+## Removing the integration
+
+This integration follows the standard removal of an integration; nothing is left behind
+on rbfa.be, since it uses no account.
+
+1. Go to **Settings → Devices & services** and open **RBFA**.
+2. Next to the team, open the menu (⋮) and choose **Delete**. Repeat this for every team.
+3. To remove the files as well, open **HACS** (or the **Marketplace**), find **RBFA**,
+   open the menu (⋮), choose **Remove** and restart Home Assistant.
+
+Dashboards, automations and scripts that use the RBFA entities show them as unavailable
+afterwards; remove or change those cards and automations yourself.
 
 ## Updates
 

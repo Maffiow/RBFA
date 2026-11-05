@@ -38,7 +38,9 @@ jobs:
           pip install ${{ matrix.install }}
           python -c "from homeassistant.const import __version__; print('Home Assistant', __version__)"
       - name: Run tests
-        run: pytest -v
+        run: pytest -v --cov=custom_components.rbfa --cov-report=term-missing --cov-report=json
+      - name: Check coverage per module (Silver rule test-coverage)
+        run: python scripts/check_coverage.py
 
   rbfa-api:
     name: Live RBFA API

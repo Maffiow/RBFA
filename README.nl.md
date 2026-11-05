@@ -27,6 +27,7 @@ jongste jeugdploegen.
 - [Hoe en wanneer de gegevens ververst worden](#hoe-en-wanneer-de-gegevens-ververst-worden)
 - [Jeugdreeksen: geen klassement, wel fairplay](#jeugdreeksen-geen-klassement-wel-fairplay)
 - [Voorbeeldkaarten](#voorbeeldkaarten)
+- [De integratie verwijderen](#de-integratie-verwijderen)
 - [Updates](#updates)
 - [Problemen oplossen](#problemen-oplossen)
 - [Een nieuwe versie uitbrengen (beheerders)](#een-nieuwe-versie-uitbrengen-beheerders)
@@ -301,6 +302,19 @@ actions:
       message: "Aftrap over 2 uur op {{ trigger.calendar_event.location | replace('\n', ', ') }}"
 mode: single
 ```
+
+## De integratie verwijderen
+
+De integratie wordt op de standaardmanier verwijderd; er blijft niets achter op rbfa.be,
+omdat ze geen account gebruikt.
+
+1. Ga naar **Instellingen → Apparaten & diensten** en open **RBFA**.
+2. Open naast de ploeg het menu (⋮) en kies **Verwijderen**. Doe dat voor elke ploeg.
+3. Wil je ook de bestanden kwijt, open dan **HACS** (of de **Marketplace**), zoek **RBFA**,
+   open het menu (⋮), kies **Verwijderen** en herstart Home Assistant.
+
+Dashboards, automatiseringen en scripts die de RBFA-entiteiten gebruiken, tonen ze daarna
+als niet beschikbaar; pas die kaarten en automatiseringen zelf aan of verwijder ze.
 
 ## Updates
 

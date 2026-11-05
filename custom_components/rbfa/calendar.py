@@ -12,6 +12,9 @@ from .const import CONF_ALT_NAME, DOMAIN, get_option
 from .coordinator import MyCoordinator
 from .entity import RbfaEntity
 
+# The coordinator fetches the data, so entity updates need no limit.
+PARALLEL_UPDATES = 0
+
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -37,7 +40,6 @@ class TeamCalendar(RbfaEntity, CalendarEntity):
     """Calendar with all matches of a RBFA team."""
 
     _attr_icon = "mdi:soccer"
-    _attr_has_entity_name = False
 
     def __init__(self, coordinator: MyCoordinator, entry: ConfigEntry) -> None:
         super().__init__(coordinator)
@@ -46,6 +48,7 @@ class TeamCalendar(RbfaEntity, CalendarEntity):
 
     @property
     def name(self) -> str:
+        """Name of the team; the entity has no device, so this is the full name."""
         alt_name = get_option(self._entry, CONF_ALT_NAME)
         if alt_name:
             return alt_name
