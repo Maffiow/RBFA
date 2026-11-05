@@ -14,11 +14,17 @@ from custom_components.rbfa.const import DOMAIN
 from .conftest import TEAM_ID
 
 
-
 @pytest.fixture(autouse=True)
 def skip_entry_setup():
-    """Only test the flow; setting up the created entry is tested in test_init."""
-    with patch("custom_components.rbfa.async_setup_entry", return_value=True):
+    """Only test the flow; setting up the created entry is tested in test_init.
+
+    The HTTP session is replaced too: closing a real one leaves a DNS resolver
+    thread behind, which the test harness reports as a leak.
+    """
+    with (
+        patch("custom_components.rbfa.async_setup_entry", return_value=True),
+        patch("custom_components.rbfa.config_flow.async_get_clientsession"),
+    ):
         yield
 
 

@@ -21,11 +21,11 @@ jobs:
             python: "3.12"
             # josepy 2 dropped an API the 2024.12 cloud integration still uses.
             install: pytest-homeassistant-custom-component==0.13.190 "josepy<2"
-          # Newest Home Assistant release on PyPI.
+          # Newest Home Assistant the test package supports; it follows each
+          # Home Assistant release within days.
           - name: latest
             python: "3.14"
             install: pytest-homeassistant-custom-component
-            upgrade_ha: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,15 +34,9 @@ jobs:
       - name: Install
         run: |
           pip install ${{ matrix.install }}
-          if [ "${{ matrix.upgrade_ha }}" = "true" ]; then
-            # The test package can trail the newest release by a few days.
-            pip install --upgrade homeassistant
-          fi
           python -c "from homeassistant.const import __version__; print('Home Assistant', __version__)"
       - name: Run tests
-        # Import Home Assistant before pytest loads its plugins: since 2026.11
-        # it must set up its httpx alias before anything imports httpx.
-        run: python -c "import sys, homeassistant, pytest; sys.exit(pytest.main(['-v']))"
+        run: pytest -v
 
   rbfa-api:
     name: Live RBFA API
