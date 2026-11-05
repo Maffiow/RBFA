@@ -8,7 +8,7 @@ from typing import Any
 
 import aiohttp
 
-from .const import API_HEADERS, API_URL, HASHES, QUERIES, REQUIRED, VARIABLES
+from .const import API_HEADERS, API_URL, QUERIES, REQUIRED, VARIABLES
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -24,7 +24,7 @@ class RbfaBlockedError(RbfaError):
 
 
 class RbfaApi:
-    """Thin wrapper around the persisted GraphQL queries of rbfa.be."""
+    """Thin wrapper around the GraphQL API of rbfa.be."""
 
     def __init__(
         self,
@@ -54,13 +54,8 @@ class RbfaApi:
         payload: dict[str, Any] = {
             "operationName": operation,
             "variables": {VARIABLES[operation]: value, "language": self._language},
+            "query": QUERIES[operation],
         }
-        if operation in QUERIES:
-            payload["query"] = QUERIES[operation]
-        else:
-            payload["extensions"] = {
-                "persistedQuery": {"version": 1, "sha256Hash": HASHES[operation]}
-            }
         try:
             async with self._session.post(
                 API_URL, json=payload, headers=API_HEADERS, timeout=TIMEOUT

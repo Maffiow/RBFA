@@ -52,20 +52,47 @@ VARIABLES = {
     "GetTeamMembers": "teamId",
 }
 
-HASHES = {
-    "GetTeam": "e16f98f7985e6b7d6553c8ca60aea3a2b65b6b84dfcabbb02b4ee55261413858",
-    "GetTeamCalendar": "3f0441e6723b9852b4f0cff2c872f4aa674c5de2d23589efc70c7a4ffb7f6383",
-    "GetMatchDetail": "cd8867b845c206fe7aa75c1ebf7b53cbda0ff030253a45e2e2b4bcc13ee46c9a",
-    "GetSeriesRankings": "0a53124a9bc8872b686f22d80fd545622dbaf4b27a7596e1207b097b92c87953",
-}
-
-# Operations sent as a full query document instead of a persisted-query hash.
+# Every operation is sent as a full query document. The rbfa.be website uses
+# persisted-query hashes, but those change whenever the site updates its
+# queries (and the old hashes then fail with "PersistedQueryNotFound"); a full
+# document keeps working as long as the fields below still exist.
 QUERIES = {
+    "GetTeam": (
+        "query GetTeam($teamId: ID!, $language: Language!) {"
+        " team(teamId: $teamId, language: $language) {"
+        " id name clubName clubId logo } }"
+    ),
+    "GetTeamCalendar": (
+        "query GetTeamCalendar($teamId: ID!, $language: Language!) {"
+        " teamCalendar(teamId: $teamId, language: $language) {"
+        " id startTime"
+        " homeTeam { id name clubId logo }"
+        " awayTeam { id name clubId logo }"
+        " outcome { status homeTeamGoals homeTeamPenaltiesScored"
+        " awayTeamGoals awayTeamPenaltiesScored subscript }"
+        " series { id name }"
+        " officials { lastName firstName status personAssigned }"
+        " showScore state } }"
+    ),
+    "GetMatchDetail": (
+        "query GetMatchDetail($matchId: ID!, $language: Language!) {"
+        " matchDetail(matchId: $matchId, language: $language) {"
+        " id startTime channel"
+        " location { name city postalCode address }"
+        " officials { lastName firstName function status personAssigned } } }"
+    ),
+    "GetSeriesRankings": (
+        "query GetSeriesRankings($seriesId: ID!, $language: Language!) {"
+        " seriesRankings(seriesId: $seriesId, language: $language) {"
+        " id name rankings { type teams {"
+        " teamId name position clubId logo points matchesPlayed"
+        " fairplayPercentage } } } }"
+    ),
     "GetTeamMembers": (
         "query GetTeamMembers($teamId: ID!, $language: Language!) {"
         " teamMembers(teamId: $teamId, language: $language) {"
-        " players { id lastName firstName statistics { numberOfMatches numberOfGoals } }"
-        " staff { id lastName firstName function } } }"
+        " players { lastName firstName statistics { numberOfMatches numberOfGoals } }"
+        " staff { lastName firstName function } } }"
     ),
 }
 
