@@ -1,6 +1,9 @@
 """Config flow tests."""
 from __future__ import annotations
 
+from unittest.mock import patch
+
+import pytest
 from homeassistant import config_entries
 from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResultType
@@ -9,6 +12,15 @@ from custom_components.rbfa.API import RbfaBlockedError
 from custom_components.rbfa.const import DOMAIN
 
 from .conftest import TEAM_ID
+
+
+
+@pytest.fixture(autouse=True)
+def skip_entry_setup():
+    """Only test the flow; setting up the created entry is tested in test_init."""
+    with patch("custom_components.rbfa.async_setup_entry", return_value=True):
+        yield
+
 
 USER_INPUT = {"team": f" {TEAM_ID} ", "duration": 105, "show_ranking": True, "show_referee": True}
 

@@ -45,7 +45,7 @@ def _integration_problems(caplog: pytest.LogCaptureFixture) -> list[str]:
     ]
 
 
-@pytest.mark.usefixtures("entity_registry_enabled_by_default")
+@pytest.mark.usefixtures("enable_all_entities")
 async def test_setup_and_sensors(
     hass: HomeAssistant, mock_api, freezer, caplog: pytest.LogCaptureFixture
 ) -> None:

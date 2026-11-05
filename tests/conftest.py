@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, PropertyMock, patch
 
 import pytest
 
@@ -20,6 +20,17 @@ def load_fixture(name: str):
 def auto_enable_custom_integrations(enable_custom_integrations):
     """Let Home Assistant load the integration from custom_components."""
     yield
+
+
+@pytest.fixture
+def enable_all_entities():
+    """Enable the sensors, which are disabled by default."""
+    with patch(
+        "homeassistant.helpers.entity.Entity.entity_registry_enabled_default",
+        new_callable=PropertyMock,
+        return_value=True,
+    ):
+        yield
 
 
 @pytest.fixture

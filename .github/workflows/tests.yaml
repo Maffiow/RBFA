@@ -17,10 +17,10 @@ jobs:
       matrix:
         include:
           # Minimum version supported (hacs.json "homeassistant").
-          - name: "2024.11.0 (minimum)"
+          - name: "2024.12.0 (minimum)"
             python: "3.12"
-            # josepy 2 dropped an API the 2024.11 cloud integration still uses.
-            install: pytest-homeassistant-custom-component==0.13.181 "josepy<2"
+            # josepy 2 dropped an API the 2024.12 cloud integration still uses.
+            install: pytest-homeassistant-custom-component==0.13.190 "josepy<2"
           # Newest Home Assistant release on PyPI.
           - name: latest
             python: "3.14"
@@ -40,9 +40,9 @@ jobs:
           fi
           python -c "from homeassistant.const import __version__; print('Home Assistant', __version__)"
       - name: Run tests
-        # Import Home Assistant before the other pytest plugins: since 2026.11
+        # Import Home Assistant before pytest loads its plugins: since 2026.11
         # it must set up its httpx alias before anything imports httpx.
-        run: pytest -v -p homeassistant
+        run: python -c "import sys, homeassistant, pytest; sys.exit(pytest.main(['-v']))"
 
   rbfa-api:
     name: Live RBFA API
