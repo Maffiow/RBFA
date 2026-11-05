@@ -2,6 +2,7 @@
 
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/docs/faq/custom_repositories)
 [![Validate](https://github.com/Maffiow/RBFA/actions/workflows/validate.yaml/badge.svg)](https://github.com/Maffiow/RBFA/actions/workflows/validate.yaml)
+[![Tests](https://github.com/Maffiow/RBFA/actions/workflows/tests.yaml/badge.svg)](https://github.com/Maffiow/RBFA/actions/workflows/tests.yaml)
 [![Release](https://img.shields.io/github/v/release/Maffiow/RBFA)](https://github.com/Maffiow/RBFA/releases)
 
 [English](README.md) · **Nederlands**
@@ -18,6 +19,7 @@ jongste jeugdploegen.
 ## Inhoud
 
 - [Wat je krijgt](#wat-je-krijgt)
+- [Vereisten](#vereisten)
 - [Installatie](#installatie)
 - [Configuratie](#configuratie)
 - [Entiteiten](#entiteiten)
@@ -42,6 +44,17 @@ jongste jeugdploegen.
 | 🧑‍⚖️ **Scheidsrechter** | De scheidsrechter van de wedstrijd, als er een is aangeduid. |
 
 Alles is alleen-lezen: de integratie wijzigt niets op rbfa.be en heeft geen account nodig.
+
+## Vereisten
+
+- **Home Assistant 2024.12.0 of nieuwer.** Op oudere versies opent het optiescherm van de
+  integratie (*Configureren*) niet; HACS biedt de integratie daar niet aan.
+- Internettoegang van Home Assistant naar `rbfa.be`.
+
+Elke wijziging wordt automatisch getest op de minimumversie (2024.12.0) en op de nieuwste
+Home Assistant-release, en de tests draaien elke week opnieuw, zodat een nieuwe
+Home Assistant-versie of een wijziging op rbfa.be snel opvalt. Versie 1.2.2 is ook
+nagekeken op een echte installatie met Home Assistant 2026.11.0.
 
 ## Installatie
 
@@ -323,6 +336,7 @@ mode: single
 |---|---|
 | *"Team … not found on rbfa.be"* | Ploegnummers veranderen elk seizoen. Zoek het nieuwe nummer op in de URL van de ploegpagina en voeg de integratie opnieuw toe. |
 | *"request blocked by the RBFA firewall"* | De RBFA-API zit achter een firewall die verzoeken blokkeert die niet van de website lijken te komen. De integratie stuurt verzoeken zoals een browser en beperkt zich tot enkele verzoeken per update; ze probeert automatisch opnieuw. Open een [issue](https://github.com/Maffiow/RBFA/issues) als het blijft gebeuren. |
+| *"PersistedQueryNotFound"* of *"Cannot query field …"* | rbfa.be heeft zijn website aangepast. Sinds 1.2.2 hangt de integratie niet meer af van de interne query-codes van de website; dat loste de *PersistedQueryNotFound*-fouten van november 2026 op. Update naar de nieuwste versie; blijft de fout, open dan een [issue](https://github.com/Maffiow/RBFA/issues). |
 | Sensoren ontbreken | Ze staan standaard uit; zet ze aan op de pagina van de integratie. |
 | `position` lijkt alfabetisch, `goals` is leeg | Die reeks heeft geen gepubliceerd klassement of uitslagen, zie [Jeugdreeksen](#jeugdreeksen-geen-klassement-wel-fairplay). |
 | `squads` of `ranking` ontbreekt | *Toon uitslagen en rangschikking* staat uit, of de eerste verversing na een herstart loopt nog (spelerslijsten vragen één verzoek per ploeg). |
@@ -342,6 +356,27 @@ logger:
 2. Verhoog `version` in `custom_components/rbfa/manifest.json` (bv. `1.2.0` → `1.2.1`).
 3. Push naar `main`. De workflow *Release* maakt de tag `v1.2.1` en een GitHub-release met
    automatische release-notes; HACS-gebruikers zien daarna de update.
+
+### Tests
+
+De workflow *Tests* draait bij elke push en elke week:
+
+- **Home Assistant 2024.12.0 (minimum)** en **latest**: zet de integratie op in een echte
+  Home Assistant-instantie met opgenomen RBFA-antwoorden (`tests/fixtures`), en faalt bij
+  elke waarschuwing of deprecation-melding over de integratie.
+- **Live RBFA API**: voert elke query uit tegen rbfa.be, om wijzigingen aan de website op
+  te vangen.
+
+Lokaal uitvoeren (Linux of macOS, Python 3.14 voor de nieuwste Home Assistant):
+
+```bash
+pip install pytest-homeassistant-custom-component
+pytest
+python scripts/check_rbfa_api.py 378177
+```
+
+Verhoog je de minimumversie, pas dan `homeassistant` in `hacs.json` aan, de minimum-job in
+`.github/workflows/tests.yaml` en de [Vereisten](#vereisten) hierboven.
 
 ## Licentie
 
