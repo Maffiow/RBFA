@@ -65,7 +65,7 @@ QUERIES = {
     "GetTeamCalendar": (
         "query GetTeamCalendar($teamId: ID!, $language: Language!) {"
         " teamCalendar(teamId: $teamId, language: $language) {"
-        " id startTime"
+        " id startTime channel"
         " homeTeam { id name clubId logo }"
         " awayTeam { id name clubId logo }"
         " outcome { status homeTeamGoals homeTeamPenaltiesScored"
